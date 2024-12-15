@@ -46,7 +46,7 @@ jobs:
         if: env.repo4_status_code != '200'
         run: |
           echo "Waiting for Repo2 artifact to be published..."
-          sleep 150
+          sleep 200
 
       - name: Recheck Repo4 Artifact Availability
         if: env.repo4_status_code != '200'
