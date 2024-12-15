@@ -103,7 +103,7 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
-      - name: SonarCloud Scan
+      - name: SonarCloud Scan 
         if: env.repo4_status_code == '200' || env.repo4_recheck_status_code == '200'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
