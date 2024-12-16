@@ -9,7 +9,7 @@ on:
       - build-artifact
 
 jobs:
-  build-and-test:
+  build-and-test: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
