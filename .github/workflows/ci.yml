@@ -21,7 +21,7 @@ jobs:
           java-version: 17
           distribution: 'temurin'
 
-      - name: Check Repo4 Artifact Availability
+      - name: Check Repo4 Artifact Availability 
         id: check-repo4-artifact
         run: |
           STATUS_CODE=$(curl -L -u ${{ github.actor }}:${{ secrets.PAT_TOKEN }} \
@@ -45,7 +45,7 @@ jobs:
       - name: Wait for Repo4 Artifact to be Published
         if: env.repo4_status_code != '200'
         run: |
-          echo "Waiting for Repo2 artifact to be published..."
+          echo "Waiting for Repo4 artifact to be published..."
           sleep 200
 
       - name: Recheck Repo4 Artifact Availability
